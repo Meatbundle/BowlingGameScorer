@@ -1,0 +1,14 @@
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\BowlingGameScorer.deps.json
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\BowlingGameScorer.runtimeconfig.json
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\BowlingGameScorer.runtimeconfig.dev.json
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\BowlingGameScorer.dll
+C:\Code\BowlingGameScorer\bin\Debug\netcoreapp2.2\BowlingGameScorer.pdb
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.csprojAssemblyReference.cache
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.csproj.CoreCompileInputs.cache
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.AssemblyInfoInputs.cache
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.AssemblyInfo.cs
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.dll
+C:\Code\BowlingGameScorer\obj\Debug\netcoreapp2.2\BowlingGameScorer.pdb
