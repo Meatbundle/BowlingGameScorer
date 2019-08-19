@@ -1,6 +1,3 @@
-using System.Runtime.InteropServices.ComTypes;
-using System.Runtime.InteropServices;
-using System.Reflection;
 using System.Collections.Generic;
 using System;
 using Xunit;
@@ -105,7 +102,7 @@ namespace BowlingGameScorer
             Assert.Equal(300, scorer.scoreGame());
         }
 
-/*
+
         [Fact]
         public void testAlmostPerfectGame()
         {
@@ -127,7 +124,46 @@ namespace BowlingGameScorer
             Assert.Equal(289, scorer.scoreGame());
         }
 
-        */
+        [Fact]
+        public void testAlsoAlmostPerfectGame()
+        {
+           List<frame> frameList = new List<frame>()
+            {
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(10,1),
+                new frame(9,0)
+            };
+            GameScorer scorer = new GameScorer(frameList);
+            Assert.Equal(281, scorer.scoreGame());
+        }
+        [Fact]
+        public void testBeginnerGame()
+        {
+           List<frame> frameList = new List<frame>()
+            {
+                new frame(10,0),
+                new frame(1,0),
+                new frame(7,2),
+                new frame(10,0),
+                new frame(9,1),
+                new frame(4,6),
+                new frame(10,0),
+                new frame(10,0),
+                new frame(1,7),
+                new frame(7,1),
+                new frame(0,0)
+            };
+            GameScorer scorer = new GameScorer(frameList);
+            Assert.Equal(130, scorer.scoreGame());
+        }
         public int randBetween0and10()
         {
             Random rand = new Random();

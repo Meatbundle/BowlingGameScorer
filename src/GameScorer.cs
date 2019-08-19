@@ -19,7 +19,7 @@ namespace BowlingGameScorer.src
         {
             if (frameIndex == 10)                                                       
             {
-                return frameList[10].roll1;                                             
+                return 0;//frameList[10].roll1;                                             
             }
             else if (frameIndex == 9)
             {
@@ -38,18 +38,17 @@ namespace BowlingGameScorer.src
                 {
                     if (frameList[frameIndex+1].isStrike())
                     {
-                        return frameList[frameIndex].addFrame() + frameList[frameIndex+1].roll1+frameList[frameIndex+2].roll1;
+                        return frameList[frameIndex].addFrame() + frameList[frameIndex+1].addFrame();//+frameList[frameIndex+2].roll1;
                     }
                     else
                     {
                         return frameList[frameIndex].addFrame() + frameList[frameIndex + 1].addFrame();
                     }
-
                 }
-                                    else
-                    {
-                        return frameList[frameIndex].addFrame();
-                    }
+                else
+                {
+                    return frameList[frameIndex].addFrame();
+                }
             }
             else if (frameList[frameIndex].isStrike())                                
             {
@@ -75,9 +74,10 @@ namespace BowlingGameScorer.src
         public int scoreGame()
         {
             int results = 0;
-            for (int i = 0; i < 11; i++)
+            for (int i = 0; i < 10; i++)
             {
                 results += scoreFrame(i);
+                Console.WriteLine($"After {i+1} frames, the score is {results}.\n");
             }
             return results;
         }
