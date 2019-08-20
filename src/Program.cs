@@ -9,17 +9,6 @@ namespace BowlingGameScorer.src
         {
             List<frame> frameList = new List<frame>()
             {
-/*                 new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,0),
-                new frame(10,10),
-                new frame(10,0) */
                 new frame(10,0),
                 new frame(10,0),
                 new frame(10,0),

@@ -25,11 +25,7 @@ namespace BowlingGameScorer.src
             {
                 if (frameList[frameIndex].isStrike())
                 {
-                    return frameList[frameIndex].addFrame() + frameList[frameIndex+1].roll1;
-                }
-                else
-                {
-                    return frameList[frameIndex].addFrame();
+                    return scoreSpare(frameIndex);
                 }
             }
             else if (frameIndex == 8)
@@ -38,37 +34,42 @@ namespace BowlingGameScorer.src
                 {
                     if (frameList[frameIndex+1].isStrike())
                     {
-                        return frameList[frameIndex].addFrame() + frameList[frameIndex+1].addFrame();//+frameList[frameIndex+2].roll1;
+                        return scoreSingleStrike(frameIndex);
                     }
-                    else
-                    {
-                        return frameList[frameIndex].addFrame() + frameList[frameIndex + 1].addFrame();
-                    }
-                }
-                else
-                {
-                    return frameList[frameIndex].addFrame();
                 }
             }
             else if (frameList[frameIndex].isStrike())                                
             {
                 if (frameList[frameIndex + 1].isStrike())
                 {
-                    return frameList[frameIndex].addFrame() + frameList[frameIndex+1].addFrame() + frameList[frameIndex + 2].roll1;
+                    return scoreTurkey(frameIndex);
                 }
                 else 
                 {
-                    return frameList[frameIndex].addFrame() + (frameList[frameIndex+1].addFrame());
+                    return scoreSingleStrike(frameIndex);
                 }
             }
             else if (frameList[frameIndex].isSpare())
             {
-                return frameList[frameIndex].addFrame()+frameList[frameIndex+1].roll1;
+                return scoreSpare(frameIndex);
             }
-            else
-            {
-                return frameList[frameIndex].addFrame();
-            }
+
+            return frameList[frameIndex].addFrame();        //fallthrough
+        }
+
+        public int scoreSpare(int frameIndex)
+        {
+            return frameList[frameIndex].addFrame() + frameList[frameIndex+1].roll1;
+        }
+
+        public int scoreSingleStrike(int frameIndex)
+        {
+            return frameList[frameIndex].addFrame() + frameList[frameIndex+1].addFrame();
+        }
+
+        public int scoreTurkey(int frameIndex)
+        {
+            return frameList[frameIndex].addFrame() + frameList[frameIndex+1].addFrame() + frameList[frameIndex + 2].roll1; 
         }
 
         public int scoreGame()
